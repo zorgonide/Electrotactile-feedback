@@ -2,7 +2,7 @@ import tkinter as tk
 from serial import Serial
 import sys
 from stim8updated import *
-
+from tkinter import ttk
 L = 0
 R = 1
 LF = 2
@@ -28,6 +28,8 @@ class KeyboardInterface(tk.Frame):
             Tacton(channel=RF+1, frequency=self.frequency, amplitude=self.amplitude,
                    duration=self.duration, pulse_width=self.pulse_width),
         ))
+        self.create_widgets()
+
         # First row: Amplitude, Pulse Width, Frequency
         tk.Label(self, text='Amplitude').grid(row=0, column=0)
         self.sb_amplitude = tk.Spinbox(
@@ -69,15 +71,40 @@ class KeyboardInterface(tk.Frame):
                                 width=8, height=4, command=self.goRight)
         button_down.grid(row=2, column=4)
 
+    def create_widgets(self):
+        # Create the progress bar
+        style = ttk.Style()
+        style.theme_use('default')
+        style.configure('Red.Horizontal.TProgressbar', background='red')
+        style.configure('Green.Horizontal.TProgressbar', background='green')
+
+        self.progress_bar = ttk.Progressbar(
+            self.master, length=200, mode='determinate', style='Green.Horizontal.TProgressbar')
+        self.progress_bar.pack(pady=10)
+
+        # Create other widgets and layout
+
+    def update_progress(self, value):
+        self.progress_bar['value'] = value
+        if value == 100:
+            self.progress_bar['style'] = 'Green.Horizontal.TProgressbar'
+        else:
+            self.progress_bar['style'] = 'Red.Horizontal.TProgressbar'
+        self.master.update()  # Update the Tkinter window
+
     def goUp(self):
+        self.update_progress(0)
         for c in range(4):
             self.fes.stimulate(self.tactons[LF])
             self.fes.stimulate(self.tactons[RF])
+            self.update_progress((c+1)*25)
 
     def Stop(self):
+        self.update_progress(0)
         for c in range(4):
             self.fes.stimulate(self.tactons[L])
             self.fes.stimulate(self.tactons[R])
+            self.update_progress((c+1)*25)
 
     def goLeft(self):
         self.fes.stimulate(self.tactons[L])
