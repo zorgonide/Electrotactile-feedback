@@ -52,43 +52,28 @@ class KeyboardInterface(tk.Frame):
             self.progress_bar['style'] = 'Red.Horizontal.TProgressbar'
         self.master.update()  # Update the Tkinter window
 
-    def goUp(self):
+    def play_sound(self, sound_file):
         self.update_progress(0)
-        playsound('Forward.mp3')
+        playsound(sound_file)
         self.update_progress(100)
+
+    def goUp(self):
+        self.play_sound('Forward.mp3')
 
     def Stop(self):
-        self.update_progress(0)
-        playsound('Stop.mp3')
-        self.update_progress(100)
+        self.play_sound('Stop.mp3')
 
     def goLeft(self):
-        self.update_progress(0)
-        playsound('Left.mp3')
-        self.update_progress(100)
+        self.play_sound('Left.mp3')
 
     def goLeftUp(self):
-        self.update_progress(0)
-        playsound('SLeft.mp3')
-        self.update_progress(100)
+        self.play_sound('SLeft.mp3')
 
     def goRightUp(self):
-        self.update_progress(0)
-        playsound('SRight.mp3')
-        self.update_progress(100)
+        self.play_sound('SRight.mp3')
 
     def goRight(self):
-        self.update_progress(0)
-        playsound('Right.mp3')
-        self.update_progress(100)
-
-    def sb_set_default(self, sb, value):
-        sb.delete(0, 'end')
-        sb.insert(0, value)
-
-    def update_fes(self):
-        for c in range(1, 5):
-            self.fes.stimulate(self.tactons[c - 1])
+        self.play_sound('Right.mp3')
 
     def sb_set_default(self, sb, value):
         sb.delete(0, 'end')
