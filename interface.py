@@ -53,10 +53,10 @@ class KeyboardInterface(tk.Frame):
         button_up = tk.Button(self, text='↑ Up', width=8,
                               height=4, command=self.goUp)
         button_up.grid(row=1, column=3, pady=10)
-        button_up = tk.Button(self, text='<= LeftUp',
+        button_up = tk.Button(self, text='<↑ LeftUp',
                               width=8, height=4, command=self.goLeftUp)
         button_up.grid(row=1, column=2, pady=10)
-        button_up = tk.Button(self, text='=> RightUp',
+        button_up = tk.Button(self, text='↑> RightUp',
                               width=8, height=4, command=self.goRightUp)
         button_up.grid(row=1, column=4, pady=10)
 
@@ -64,7 +64,7 @@ class KeyboardInterface(tk.Frame):
                                 width=8, height=4, command=self.goLeft)
         button_left.grid(row=2, column=2)
 
-        button_right = tk.Button(self,  text='X STOP',
+        button_right = tk.Button(self,  text='STOP',
                                  width=8, height=4, command=self.Stop)
         button_right.grid(row=2, column=3)
         button_down = tk.Button(self, text='→ Right',
@@ -175,13 +175,6 @@ if __name__ == '__main__':
         print("Error opening serial connection on port {}".format(port))
         exit(-1)
     fes.enable_refresh_lcd()
-
-    # root = tk.Tk()
-    # for c in range(1, 9):
-    #     tacton = Tacton(channel=c, frequency=1, amplitude=7,
-    #                     duration=-1, pulse_width=310)
-    #     UIChannelControl(root, fes, tacton)
-    # root.mainloop()
     root = tk.Tk()
     keyboard = KeyboardInterface(root, fes)
     root.mainloop()
