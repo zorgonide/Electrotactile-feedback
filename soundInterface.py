@@ -1,6 +1,8 @@
 import tkinter as tk
 from tkinter import ttk
 from playsound import playsound
+import logging
+from datetime import datetime
 
 
 class KeyboardInterface(tk.Frame):
@@ -52,6 +54,9 @@ class KeyboardInterface(tk.Frame):
             self.progress_bar['style'] = 'Red.Horizontal.TProgressbar'
         self.master.update()  # Update the Tkinter window
 
+    def timestamp(self):
+        return datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+
     def play_sound(self, sound_file):
         self.update_progress(0)
         playsound(sound_file)
@@ -59,21 +64,33 @@ class KeyboardInterface(tk.Frame):
 
     def goUp(self):
         self.play_sound('Forward.mp3')
+        logger.info(
+            f"Command: goUp, Timestamp: {self.timestamp()}, Participant: {participant_name}")
 
     def Stop(self):
         self.play_sound('Stop.mp3')
+        logger.info(
+            f"Command: Stop, Timestamp: {self.timestamp()}, Participant: {participant_name}")
 
     def goLeft(self):
         self.play_sound('Left.mp3')
+        logger.info(
+            f"Command: goLeft, Timestamp: {self.timestamp()}, Participant: {participant_name}")
 
     def goLeftUp(self):
         self.play_sound('SLeft.mp3')
+        logger.info(
+            f"Command: goLeftUp, Timestamp: {self.timestamp()}, Participant: {participant_name}")
 
     def goRightUp(self):
         self.play_sound('SRight.mp3')
+        logger.info(
+            f"Command: goRightUp, Timestamp: {self.timestamp()}, Participant: {participant_name}")
 
     def goRight(self):
         self.play_sound('Right.mp3')
+        logger.info(
+            f"Command: goRight, Timestamp: {self.timestamp()}, Participant: {participant_name}")
 
     def sb_set_default(self, sb, value):
         sb.delete(0, 'end')
@@ -81,7 +98,12 @@ class KeyboardInterface(tk.Frame):
 
 
 if __name__ == '__main__':
-    # initialise FES Controller
+    participant_name = input('Please enter your name: ')
+    logger = logging.getLogger('UserStudyLogger')
+    logger.setLevel(logging.INFO)
+    log_file = "./logs/sound/"+participant_name + '-SoundTest.txt'
+    file_handler = logging.FileHandler(log_file)
+    logger.addHandler(file_handler)
     root = tk.Tk()
     keyboard = KeyboardInterface(root)
     root.mainloop()

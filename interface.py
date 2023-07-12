@@ -3,6 +3,8 @@ from serial import Serial
 import sys
 from stim8updated import *
 from tkinter import ttk
+import logging
+from datetime import datetime
 L = 0
 R = 1
 LF = 2
@@ -92,7 +94,12 @@ class KeyboardInterface(tk.Frame):
             self.progress_bar['style'] = 'Red.Horizontal.TProgressbar'
         self.master.update()  # Update the Tkinter window
 
+    def timestamp(self):
+        return datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+
     def goUp(self):
+        logger.info(
+            f"Command: goUp, Timestamp: {self.timestamp()}, Participant: {participant_name}")
         self.update_progress(0)
         for c in range(4):
             self.fes.stimulate(self.tactons[LF])
@@ -100,6 +107,8 @@ class KeyboardInterface(tk.Frame):
             self.update_progress((c+1)*25)
 
     def Stop(self):
+        logger.info(
+            f"Command: Stop, Timestamp: {self.timestamp()}, Participant: {participant_name}")
         self.update_progress(0)
         for c in range(4):
             self.fes.stimulate(self.tactons[L])
@@ -107,9 +116,13 @@ class KeyboardInterface(tk.Frame):
             self.update_progress((c+1)*25)
 
     def goLeft(self):
+        logger.info(
+            f"Command: goLeft, Timestamp: {self.timestamp()}, Participant: {participant_name}")
         self.fes.stimulate(self.tactons[L])
 
     def goLeftUp(self):
+        logger.info(
+            f"Command: goLeftUp, Timestamp: {self.timestamp()}, Participant: {participant_name}")
         self.tactons[L].duration = 1
         self.tactons[LF].duration = 1
         for c in range(2):
@@ -119,6 +132,8 @@ class KeyboardInterface(tk.Frame):
         self.tactons[LF].duration = self.duration
 
     def goRightUp(self):
+        logger.info(
+            f"Command: goRightUp, Timestamp: {self.timestamp()}, Participant: {participant_name}")
         self.tactons[R].duration = 1
         self.tactons[RF].duration = 1
         for c in range(2):
@@ -128,6 +143,8 @@ class KeyboardInterface(tk.Frame):
         self.tactons[RF].duration = self.duration
 
     def goRight(self):
+        logger.info(
+            f"Command: goRight, Timestamp: {self.timestamp()}, Participant: {participant_name}")
         self.fes.stimulate(self.tactons[R])
 
     def update_amplitude(self):
@@ -164,6 +181,12 @@ class KeyboardInterface(tk.Frame):
 
 
 if __name__ == '__main__':
+    participant_name = input('Please enter your name-age-gender(M/F/O): ')
+    logger = logging.getLogger('UserStudyLogger')
+    logger.setLevel(logging.INFO)
+    log_file = "./logs/haptic/"+participant_name + '-HapticTest.txt'
+    file_handler = logging.FileHandler(log_file)
+    logger.addHandler(file_handler)
     # initialise FES Controller
     port = 'COM3'  # changed from 12
     # port = '/dev/tty.usbserial-FTWTCB3C'
