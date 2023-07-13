@@ -22,9 +22,9 @@ class KeyboardInterface(tk.Frame):
         self.duration = 1
         self.tactons = list((
             Tacton(channel=L+1, frequency=self.frequency, amplitude=self.amplitude,
-                   duration=self.duration, pulse_width=self.pulse_width),
+                   duration=-1, pulse_width=self.pulse_width),
             Tacton(channel=R+1, frequency=self.frequency, amplitude=self.amplitude,
-                   duration=self.duration, pulse_width=self.pulse_width),
+                   duration=-1, pulse_width=self.pulse_width),
             Tacton(channel=LF+1, frequency=self.frequency, amplitude=self.amplitude,
                    duration=self.duration, pulse_width=self.pulse_width),
             Tacton(channel=RF+1, frequency=self.frequency, amplitude=self.amplitude,
@@ -51,27 +51,44 @@ class KeyboardInterface(tk.Frame):
         self.sb_set_default(self.sb_frequency, self.tactons[0].frequency)
         self.sb_frequency.grid(row=0, column=5, padx=5, pady=10)
 
+        # define button as intvars
+        self.button_up_active = tk.IntVar()
+        self.button_left_up_active = tk.IntVar()
+        self.button_right_up_active = tk.IntVar()
+        self.button_left_active = tk.IntVar()
+        self.button_right_active = tk.IntVar()
+        self.button_down_active = tk.IntVar()
+
         # Second row: Keyboard buttons
         button_up = tk.Button(self, text='↑ Up', width=8,
                               height=4, command=self.goUp)
         button_up.grid(row=1, column=3, pady=10)
-        button_up = tk.Button(self, text='<↑ LeftUp',
-                              width=8, height=4, command=self.goLeftUp)
-        button_up.grid(row=1, column=2, pady=10)
-        button_up = tk.Button(self, text='↑> RightUp',
-                              width=8, height=4, command=self.goRightUp)
-        button_up.grid(row=1, column=4, pady=10)
+        self.button_up_active.set(0)
 
-        button_left = tk.Button(self, text='← Left',
-                                width=8, height=4, command=self.goLeft)
-        button_left.grid(row=2, column=2)
+        self.button_left_up = tk.Button(self, text='<↑ LeftUp',
+                                        width=8, height=4, command=self.goLeftUp)
+        self.button_left_up.grid(row=1, column=2, pady=10)
+        self.button_left_up_active.set(0)
 
-        button_right = tk.Button(self,  text='STOP',
-                                 width=8, height=4, command=self.Stop)
-        button_right.grid(row=2, column=3)
-        button_down = tk.Button(self, text='→ Right',
-                                width=8, height=4, command=self.goRight)
-        button_down.grid(row=2, column=4)
+        self.button_right_up = tk.Button(self, text='↑> RightUp',
+                                         width=8, height=4, command=self.goRightUp)
+        self.button_right_up.grid(row=1, column=4, pady=10)
+        self.button_right_up_active.set(0)
+
+        self.button_left = tk.Button(self, text='← Left',
+                                     width=8, height=4, command=self.goLeft)
+        self.button_left.grid(row=2, column=2)
+        self.button_left_active.set(0)
+
+        self.button_down = tk.Button(self,  text='STOP',
+                                     width=8, height=4, command=self.Stop)
+        self.button_down.grid(row=2, column=3)
+        self.button_down_active.set(0)
+
+        self.button_right = tk.Button(self, text='→ Right',
+                                      width=8, height=4, command=self.goRight)
+        self.button_right.grid(row=2, column=4)
+        self.button_right_active.set(0)
 
     def create_widgets(self):
         # Create the progress bar
@@ -98,8 +115,9 @@ class KeyboardInterface(tk.Frame):
         return datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
     def goUp(self):
+
         logger.info(
-            f"Command: goUp, Timestamp: {self.timestamp()}, Participant: {participant_name}")
+            f"Command: goForward, Timestamp: {self.timestamp()}, Participant: {participant_name}")
         self.update_progress(0)
         for c in range(4):
             self.fes.stimulate(self.tactons[LF])
@@ -107,6 +125,8 @@ class KeyboardInterface(tk.Frame):
             self.update_progress((c+1)*25)
 
     def Stop(self):
+        self.tactons[L].duration = 1
+        self.tactons[R].duration = 1
         logger.info(
             f"Command: Stop, Timestamp: {self.timestamp()}, Participant: {participant_name}")
         self.update_progress(0)
@@ -114,11 +134,20 @@ class KeyboardInterface(tk.Frame):
             self.fes.stimulate(self.tactons[L])
             self.fes.stimulate(self.tactons[R])
             self.update_progress((c+1)*25)
+        self.tactons[L].duration = -1
+        self.tactons[R].duration = -1
 
     def goLeft(self):
-        logger.info(
-            f"Command: goLeft, Timestamp: {self.timestamp()}, Participant: {participant_name}")
-        self.fes.stimulate(self.tactons[L])
+        if self.button_left_active.get() == 0:
+            logger.info(
+                f"Command: goLeft, Timestamp: {self.timestamp()}, Participant: {participant_name}")
+            self.toggle_button_color(self.button_left_active, self.button_left)
+            self.fes.stimulate(self.tactons[L])
+        else:
+            logger.info(
+                f"Command: goLeftStop, Timestamp: {self.timestamp()}, Participant: {participant_name}")
+            self.toggle_button_color(self.button_left_active, self.button_left)
+            self.fes.stop(self.tactons[L])
 
     def goLeftUp(self):
         logger.info(
@@ -143,11 +172,22 @@ class KeyboardInterface(tk.Frame):
         self.tactons[RF].duration = self.duration
 
     def goRight(self):
-        logger.info(
-            f"Command: goRight, Timestamp: {self.timestamp()}, Participant: {participant_name}")
-        self.fes.stimulate(self.tactons[R])
+        if self.button_right_active.get() == 0:
+            logger.info(
+                f"Command: goRight, Timestamp: {self.timestamp()}, Participant: {participant_name}")
+            self.toggle_button_color(
+                self.button_right_active, self.button_right)
+            self.fes.stimulate(self.tactons[R])
+        else:
+            logger.info(
+                f"Command: goRightStop, Timestamp: {self.timestamp()}, Participant: {participant_name}")
+            self.toggle_button_color(
+                self.button_right_active, self.button_right)
+            self.fes.stop(self.tactons[R])
 
     def update_amplitude(self):
+        logger.info(
+            f"Command: updated Amplitude to {self.sb_amplitude.get()}, Timestamp: {self.timestamp()}, Participant: {participant_name}")
         for c in range(1, 5):
             self.tactons[c - 1].amplitude = int(self.sb_amplitude.get())
         # self.tacton.amplitude = int(self.sb_amplitude.get())
@@ -178,6 +218,15 @@ class KeyboardInterface(tk.Frame):
     def sb_set_default(self, sb, value):
         sb.delete(0, 'end')
         sb.insert(0, value)
+
+    def toggle_button_color(self, button_state, button):
+        if button_state.get() == 0:
+            button.config(bg="red")
+            button_state.set(1)
+        else:
+            # Replace with the original color of your button
+            button.config(bg="SystemButtonFace")
+            button_state.set(0)
 
 
 if __name__ == '__main__':
