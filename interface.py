@@ -31,7 +31,7 @@ class KeyboardInterface(tk.Frame):
             Tacton(channel=RF+1, frequency=self.frequency, amplitude=self.amplitude,
                    duration=self.duration, pulse_width=self.pulse_width),
         ))
-        self.create_widgets()
+        # self.create_widgets()
 
         # First row: Amplitude, Pulse Width, Frequency
         tk.Label(self, text='Amplitude').grid(row=0, column=0)
@@ -93,8 +93,8 @@ class KeyboardInterface(tk.Frame):
         # array of button states
         self.arrayOfButtonStates = [self.button_up_active, self.button_left_up_active, self.button_right_up_active,
                                     self.button_left_active, self.button_right_active, self.button_down_active]
-    # check if any button is active and disable it function
 
+    # check if any button is active and disable it function
     def check_button_active(self):
         for button in self.arrayOfButtonStates:
             if button["state"] == 1:
@@ -133,7 +133,7 @@ class KeyboardInterface(tk.Frame):
                 f"Command: goForward, Timestamp: {self.timestamp()}, Participant: {participant_name}")
             self.toggle_button_color(self.button_up_active, self.button_up)
             self.fes.stimulate(self.tactons[LF])
-            time.sleep(0.66)
+            time.sleep(0.7)
             self.fes.stimulate(self.tactons[RF])
         else:
             logger.info(
@@ -150,7 +150,7 @@ class KeyboardInterface(tk.Frame):
                 f"Command: goForward, Timestamp: {self.timestamp()}, Participant: {participant_name}")
             self.toggle_button_color(self.button_down_active, self.button_down)
             self.fes.stimulate(self.tactons[L])
-            time.sleep(0.66)
+            time.sleep(0.7)
             self.fes.stimulate(self.tactons[R])
         else:
             logger.info(
@@ -226,20 +226,14 @@ class KeyboardInterface(tk.Frame):
             f"Command: updated Amplitude to {self.sb_amplitude.get()}, Timestamp: {self.timestamp()}, Participant: {participant_name}")
         for c in range(1, 5):
             self.tactons[c - 1].amplitude = int(self.sb_amplitude.get())
-        # self.tacton.amplitude = int(self.sb_amplitude.get())
-        # self.update_fes()  # not necessary for now
 
     def update_pulse_width(self):
         for c in range(1, 5):
             self.tactons[c - 1].pulse_width = int(self.sb_pulse_width.get())
-        # self.tacton.pulse_width = int(self.sb_pulse_width.get())
-        # self.update_fes()  # not necessary for now
 
     def update_frequency(self):
         for c in range(1, 5):
             self.tactons[c - 1].frequency = int(self.sb_frequency.get())
-        # self.tacton.frequency = int(self.sb_frequency.get())
-        # self.update_fes()  # not necessary for now
 
     # def update_duration(self):
     #     for c in range(1, 5):
