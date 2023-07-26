@@ -273,9 +273,9 @@ if __name__ == '__main__':
     if len(sys.argv) > 1:
         port = sys.argv[1]
     fes = FESDriver(port, 38400)
-    if not fes.connect():
-        print("Error opening serial connection on port {}".format(port))
-        exit(-1)
+    # if not fes.connect():
+    #     print("Error opening serial connection on port {}".format(port))
+    #     exit(-1)
     fes.enable_refresh_lcd()
     root = tk.Tk()
     keyboard = KeyboardInterface(root, fes)
