@@ -92,14 +92,24 @@ class KeyboardInterface(tk.Frame):
         pygame.mixer.music.play()
 
     def goUp(self):
-        self.check_button_active()
-        self.toggle_button_color(self.button_up_active, self.button_up)
-        if self.button_up_active["state"] == 1:
+        if self.button_up_active["state"] == 0:
+            self.check_button_active()
+            self.toggle_button_color(self.button_up_active, self.button_up)
             self.sound_thread = threading.Thread(
                 target=self.play_sound_thread, args=('Forward.mp3', self.button_up_active, "Forward", 6))
             self.sound_thread.start()
+        else:
+            self.sound_thread.join()
+            self.toggle_button_color(self.button_up_active, self.button_up)
 
     def play_sound_thread(self, sound, button_state, direction, timestamp=4):
+        while button_state["state"] == 1:
+            self.play_sound(sound)
+            logger.info(
+                f"Command: {direction}, Timestamp: {self.timestamp()}, Participant: {participant_name}")
+            time.sleep(timestamp)
+
+    def play_sound_thread_up(self, sound, button_state, direction, timestamp=4):
         while button_state["state"] == 1:
             self.play_sound(sound)
             logger.info(
@@ -115,38 +125,50 @@ class KeyboardInterface(tk.Frame):
             f"Command: Stop, Timestamp: {self.timestamp()}, Participant: {participant_name}")
 
     def goLeft(self):
-        self.check_button_active()
-        self.toggle_button_color(self.button_left_active, self.button_left)
-        if self.button_left_active["state"] == 1:
+        if self.button_left_active["state"] == 0:
+            self.check_button_active()
+            self.toggle_button_color(self.button_left_active, self.button_left)
             self.sound_thread = threading.Thread(
                 target=self.play_sound_thread, args=('Left.mp3', self.button_left_active, "Left"))
             self.sound_thread.start()
+        else:
+            self.toggle_button_color(self.button_left_active, self.button_left)
 
     def goLeftUp(self):
-        self.check_button_active()
-        self.toggle_button_color(
-            self.button_left_up_active, self.button_left_up)
-        if self.button_left_up_active["state"] == 1:
+        if self.button_left_up_active["state"] == 0:
+            self.check_button_active()
+            self.toggle_button_color(
+                self.button_left_up_active, self.button_left_up)
             self.sound_thread = threading.Thread(
                 target=self.play_sound_thread, args=('SLeft.mp3', self.button_left_up_active, "LeftUp"))
             self.sound_thread.start()
+        else:
+            self.toggle_button_color(
+                self.button_left_up_active, self.button_left_up)
 
     def goRightUp(self):
-        self.check_button_active()
-        self.toggle_button_color(
-            self.button_right_up_active, self.button_right_up)
-        if self.button_right_up_active["state"] == 1:
+        if self.button_right_up_active["state"] == 0:
+            self.check_button_active()
+            self.toggle_button_color(
+                self.button_right_up_active, self.button_right_up)
             self.sound_thread = threading.Thread(
                 target=self.play_sound_thread, args=('SRight.mp3', self.button_right_up_active, "RightUp"))
             self.sound_thread.start()
+        else:
+            self.toggle_button_color(
+                self.button_right_up_active, self.button_right_up)
 
     def goRight(self):
-        self.check_button_active()
-        self.toggle_button_color(self.button_right_active, self.button_right)
-        if self.button_right_active["state"] == 1:
+        if self.button_right_active["state"] == 0:
+            self.check_button_active()
+            self.toggle_button_color(
+                self.button_right_active, self.button_right)
             self.sound_thread = threading.Thread(
                 target=self.play_sound_thread, args=('Right.mp3', self.button_right_active, "Right"))
             self.sound_thread.start()
+        else:
+            self.toggle_button_color(
+                self.button_right_active, self.button_right)
 
     def sb_set_default(self, sb, value):
         sb.delete(0, 'end')

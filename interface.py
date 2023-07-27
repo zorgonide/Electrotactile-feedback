@@ -17,9 +17,9 @@ class KeyboardInterface(tk.Frame):
         tk.Frame.__init__(self, master, padx=10, pady=10)
         self.pack()
         self.fes = fes
-        self.amplitude = 7
+        self.amplitude = 9
         self.frequency = 1
-        self.pulse_width = 500
+        self.pulse_width = 200
         self.duration = -1
         self.tactons = list((
             Tacton(channel=L+1, frequency=self.frequency, amplitude=self.amplitude,
@@ -130,14 +130,14 @@ class KeyboardInterface(tk.Frame):
         if self.button_up_active["state"] == 0:
             self.check_button_active()
             logger.info(
-                f"Command: goForward, Timestamp: {self.timestamp()}, Participant: {participant_name}")
+                f"Command: goForward, Timestamp: {self.timestamp()}, Participant: {participant_name}, Amplitude: {self.amplitude}, Pulse width: {self.pulse_width}")
             self.toggle_button_color(self.button_up_active, self.button_up)
             self.fes.stimulate(self.tactons[LF])
-            time.sleep(0.7)
+            time.sleep(0.63)
             self.fes.stimulate(self.tactons[RF])
         else:
             logger.info(
-                f"Command: goForwardStop, Timestamp: {self.timestamp()}, Participant: {participant_name}")
+                f"Command: goForwardStop, Timestamp: {self.timestamp()}, Participant: {participant_name}, Amplitude: {self.amplitude}, Pulse width: {self.pulse_width}")
             self.toggle_button_color(self.button_up_active, self.button_up)
             self.fes.stop(self.tactons[LF])
             self.fes.stop(self.tactons[RF])
@@ -147,14 +147,14 @@ class KeyboardInterface(tk.Frame):
         if self.button_down_active["state"] == 0:
             self.check_button_active()
             logger.info(
-                f"Command: goForward, Timestamp: {self.timestamp()}, Participant: {participant_name}")
+                f"Command: goForward, Timestamp: {self.timestamp()}, Participant: {participant_name}, Amplitude: {self.amplitude}, Pulse width: {self.pulse_width}")
             self.toggle_button_color(self.button_down_active, self.button_down)
             self.fes.stimulate(self.tactons[L])
-            time.sleep(0.7)
+            time.sleep(0.63)
             self.fes.stimulate(self.tactons[R])
         else:
             logger.info(
-                f"Command: goForwardStop, Timestamp: {self.timestamp()}, Participant: {participant_name}")
+                f"Command: goForwardStop, Timestamp: {self.timestamp()}, Participant: {participant_name}, Amplitude: {self.amplitude}, Pulse width: {self.pulse_width}")
             self.toggle_button_color(self.button_down_active, self.button_down)
             self.fes.stop(self.tactons[L])
             self.fes.stop(self.tactons[R])
@@ -164,12 +164,12 @@ class KeyboardInterface(tk.Frame):
         if self.button_left_active["state"] == 0:
             self.check_button_active()
             logger.info(
-                f"Command: goLeft, Timestamp: {self.timestamp()}, Participant: {participant_name}")
+                f"Command: goLeft, Timestamp: {self.timestamp()}, Participant: {participant_name}, Amplitude: {self.amplitude}, Pulse width: {self.pulse_width}")
             self.toggle_button_color(self.button_left_active, self.button_left)
             self.fes.stimulate(self.tactons[L])
         else:
             logger.info(
-                f"Command: goLeftStop, Timestamp: {self.timestamp()}, Participant: {participant_name}")
+                f"Command: goLeftStop, Timestamp: {self.timestamp()}, Participant: {participant_name}, Amplitude: {self.amplitude}, Pulse width: {self.pulse_width}")
             self.toggle_button_color(self.button_left_active, self.button_left)
             self.fes.stop(self.tactons[L])
 
@@ -178,13 +178,13 @@ class KeyboardInterface(tk.Frame):
         if self.button_left_up_active["state"] == 0:
             self.check_button_active()
             logger.info(
-                f"Command: goLeftUp, Timestamp: {self.timestamp()}, Participant: {participant_name}")
+                f"Command: goLeftUp, Timestamp: {self.timestamp()}, Participant: {participant_name}, Amplitude: {self.amplitude}, Pulse width: {self.pulse_width}")
             self.toggle_button_color(
                 self.button_left_up_active, self.button_left_up)
             self.fes.stimulate(self.tactons[LF])
         else:
             logger.info(
-                f"Command: goLeftUpStop, Timestamp: {self.timestamp()}, Participant: {participant_name}")
+                f"Command: goLeftUpStop, Timestamp: {self.timestamp()}, Participant: {participant_name}, Amplitude: {self.amplitude}, Pulse width: {self.pulse_width}")
             self.toggle_button_color(
                 self.button_left_up_active, self.button_left_up)
             self.fes.stop(self.tactons[LF])
@@ -194,13 +194,13 @@ class KeyboardInterface(tk.Frame):
         if self.button_right_up_active["state"] == 0:
             self.check_button_active()
             logger.info(
-                f"Command: goRightUp, Timestamp: {self.timestamp()}, Participant: {participant_name}")
+                f"Command: goRightUp, Timestamp: {self.timestamp()}, Participant: {participant_name}, Amplitude: {self.amplitude}, Pulse width: {self.pulse_width}")
             self.toggle_button_color(
                 self.button_right_up_active, self.button_right_up)
             self.fes.stimulate(self.tactons[RF])
         else:
             logger.info(
-                f"Command: goRightUpStop, Timestamp: {self.timestamp()}, Participant: {participant_name}")
+                f"Command: goRightUpStop, Timestamp: {self.timestamp()}, Participant: {participant_name}, Amplitude: {self.amplitude}, Pulse width: {self.pulse_width}")
             self.toggle_button_color(
                 self.button_right_up_active, self.button_right_up)
             self.fes.stop(self.tactons[RF])
@@ -210,20 +210,20 @@ class KeyboardInterface(tk.Frame):
         if self.button_right_active["state"] == 0:
             self.check_button_active()
             logger.info(
-                f"Command: goRight, Timestamp: {self.timestamp()}, Participant: {participant_name}")
+                f"Command: goRight, Timestamp: {self.timestamp()}, Participant: {participant_name}, Amplitude: {self.amplitude}, Pulse width: {self.pulse_width}")
             self.toggle_button_color(
                 self.button_right_active, self.button_right)
             self.fes.stimulate(self.tactons[R])
         else:
             logger.info(
-                f"Command: goRightStop, Timestamp: {self.timestamp()}, Participant: {participant_name}")
+                f"Command: goRightStop, Timestamp: {self.timestamp()}, Participant: {participant_name}, Amplitude: {self.amplitude}, Pulse width: {self.pulse_width}")
             self.toggle_button_color(
                 self.button_right_active, self.button_right)
             self.fes.stop(self.tactons[R])
 
     def update_amplitude(self):
         logger.info(
-            f"Command: updated Amplitude to {self.sb_amplitude.get()}, Timestamp: {self.timestamp()}, Participant: {participant_name}")
+            f"Command: updated Amplitude to {self.sb_amplitude.get()}, Timestamp: {self.timestamp()}, Participant: {participant_name}, Amplitude: {self.amplitude}, Pulse width: {self.pulse_width}")
         for c in range(1, 5):
             self.tactons[c - 1].amplitude = int(self.sb_amplitude.get())
 
@@ -260,7 +260,8 @@ class KeyboardInterface(tk.Frame):
 
 
 if __name__ == '__main__':
-    participant_name = input('Please enter your name-age-gender(M/F/O): ')
+    # participant_name = input('Please enter your name-age-gender(M/F/O): ')
+    participant_name = "test"
     logger = logging.getLogger('UserStudyLogger')
     logger.setLevel(logging.INFO)
     log_file = "./logs/haptic/"+participant_name + '-HapticTest.txt'
@@ -273,9 +274,9 @@ if __name__ == '__main__':
     if len(sys.argv) > 1:
         port = sys.argv[1]
     fes = FESDriver(port, 38400)
-    # if not fes.connect():
-    #     print("Error opening serial connection on port {}".format(port))
-    #     exit(-1)
+    if not fes.connect():
+        print("Error opening serial connection on port {}".format(port))
+        exit(-1)
     fes.enable_refresh_lcd()
     root = tk.Tk()
     keyboard = KeyboardInterface(root, fes)
