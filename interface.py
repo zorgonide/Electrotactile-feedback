@@ -53,29 +53,37 @@ class KeyboardInterface(tk.Frame):
         self.sb_frequency.grid(row=0, column=5, padx=5, pady=10)
 
         # Second row: Keyboard buttons
-        self.button_up = tk.Button(self, text='↑ Up', width=8,
-                                   height=4, command=self.goUp)
-        self.button_up.grid(row=1, column=3, pady=10)
+        self.button_up = tk.Button(self, text='↑ Up', width=11,
+                                   height=5, command=self.goUp)
+        self.button_up.grid(row=1, column=3, pady=10, padx=10)
 
         self.button_left_up = tk.Button(self, text='<↑ LeftUp',
-                                        width=8, height=4, command=self.goLeftUp)
-        self.button_left_up.grid(row=1, column=2, pady=10)
+                                        width=11, height=5, command=self.goLeftUp)
+        self.button_left_up.grid(row=1, column=2, pady=10, padx=10)
 
         self.button_right_up = tk.Button(self, text='↑> RightUp',
-                                         width=8, height=4, command=self.goRightUp)
-        self.button_right_up.grid(row=1, column=4, pady=10)
+                                         width=11, height=5, command=self.goRightUp)
+        self.button_right_up.grid(row=1, column=4, pady=10, padx=10)
 
         self.button_left = tk.Button(self, text='← Left',
-                                     width=8, height=4, command=self.goLeft)
-        self.button_left.grid(row=2, column=2)
+                                     width=11, height=5, command=self.goLeft)
+        self.button_left.grid(row=2, column=2,  pady=10, padx=10)
 
         self.button_down = tk.Button(self,  text='STOP',
-                                     width=8, height=4, command=self.Stop)
-        self.button_down.grid(row=2, column=3)
+                                     width=11, height=5, command=self.Stop)
+        self.button_down.grid(row=2, column=3,  pady=10, padx=10)
 
         self.button_right = tk.Button(self, text='→ Right',
-                                      width=8, height=4, command=self.goRight)
-        self.button_right.grid(row=2, column=4)
+                                      width=11, height=5, command=self.goRight)
+        self.button_right.grid(row=2, column=4,  pady=10, padx=10)
+
+        self.start_button = tk.Button(
+            self, text='Start', width=11, height=5, command=self.start)
+        self.start_button.grid(row=3, column=2, pady=10, padx=10)
+
+        self.stop_button = tk.Button(
+            self, text='Exit', width=11, height=5, command=self.stop)
+        self.stop_button.grid(row=3, column=3, pady=10, padx=10)
 
         # button states
         self.button_up_active = {"state": 0, "button": self.button_up, "tactons": [
@@ -258,9 +266,18 @@ class KeyboardInterface(tk.Frame):
             button.config(bg="SystemButtonFace")
             button_state["state"] = 0
 
+    def start(self):
+        logger.info(
+            f"Start: Timestamp: {self.timestamp()}, Participant: {participant_name}, Amplitude: {self.amplitude}, Pulse width: {self.pulse_width}")
+
+    def stop(self):
+        logger.info(
+            f"Stop: Timestamp: {self.timestamp()}, Participant: {participant_name}, Amplitude: {self.amplitude}, Pulse width: {self.pulse_width}")
+
 
 if __name__ == '__main__':
     participant_name = input('Please enter your name-age-gender(M/F/O): ')
+    # participant_name = "testt"
     logger = logging.getLogger('UserStudyLogger')
     logger.setLevel(logging.INFO)
     log_file = "./logs/haptic/"+participant_name + '-HapticTest.txt'

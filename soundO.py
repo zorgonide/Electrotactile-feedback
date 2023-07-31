@@ -34,6 +34,21 @@ class KeyboardInterface(tk.Frame):
                                 width=8, height=4, command=self.goRight)
         button_down.grid(row=2, column=4)
 
+        self.start_button = tk.Button(
+            self, text='Start', width=11, height=5, command=self.start)
+        self.start_button.grid(row=3, column=2, pady=10, padx=10)
+
+        self.stop_button = tk.Button(
+            self, text='Exit', width=11, height=5, command=self.stop)
+        self.stop_button.grid(row=3, column=3, pady=10, padx=10)
+
+    def start(self):
+        logger.info(
+            f"Start: Timestamp: {self.timestamp()}, Participant: {participant_name}")
+
+    def stop(self):
+        logger.info(
+            f"Stop: Timestamp: {self.timestamp()}, Participant: {participant_name}")
     def create_widgets(self):
         # Create the progress bar
         style = ttk.Style()
