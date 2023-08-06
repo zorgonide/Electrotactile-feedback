@@ -1,0 +1,56 @@
+Command: goLeft, Timestamp: 2023-08-03 15:20:51, Participant: vigneshP8
+Command: goLeftStop, Timestamp: 2023-08-03 15:21:05, Participant: vigneshP8
+Command: goLeft, Timestamp: 2023-08-03 15:21:08, Participant: vigneshP8
+Command: goLeftStop, Timestamp: 2023-08-03 15:21:09, Participant: vigneshP8
+Command: goLeft, Timestamp: 2023-08-03 15:22:09, Participant: vigneshP8
+Command: goLeftStop, Timestamp: 2023-08-03 15:22:11, Participant: vigneshP8
+Command: updated Amplitude to 9, Timestamp: 2023-08-03 15:22:15, Participant: vigneshP8
+Command: updated Amplitude to 10, Timestamp: 2023-08-03 15:22:15, Participant: vigneshP8
+Command: goLeft, Timestamp: 2023-08-03 15:22:16, Participant: vigneshP8
+Command: goLeftStop, Timestamp: 2023-08-03 15:22:17, Participant: vigneshP8
+Command: goForward, Timestamp: 2023-08-03 15:22:19, Participant: vigneshP8
+Command: goForward, Timestamp: 2023-08-03 15:22:23, Participant: vigneshP8
+Command: goLeft, Timestamp: 2023-08-03 15:22:50, Participant: vigneshP8
+Command: goLeftStop, Timestamp: 2023-08-03 15:22:54, Participant: vigneshP8
+Command: goLeftUp, Timestamp: 2023-08-03 15:22:55, Participant: vigneshP8
+Command: goLeftUpStop, Timestamp: 2023-08-03 15:22:57, Participant: vigneshP8
+Command: goRightUp, Timestamp: 2023-08-03 15:22:58, Participant: vigneshP8
+Command: goRightUpStop, Timestamp: 2023-08-03 15:23:00, Participant: vigneshP8
+Command: goRight, Timestamp: 2023-08-03 15:23:01, Participant: vigneshP8
+Command: goRightStop, Timestamp: 2023-08-03 15:23:03, Participant: vigneshP8
+Command: goForward, Timestamp: 2023-08-03 15:23:04, Participant: vigneshP8
+Command: Stop, Timestamp: 2023-08-03 15:23:10, Participant: vigneshP8
+Command: Stop, Timestamp: 2023-08-03 15:23:17, Participant: vigneshP8
+Command: goLeftUp, Timestamp: 2023-08-03 15:23:44, Participant: vigneshP8
+Command: goLeftUpStop, Timestamp: 2023-08-03 15:23:46, Participant: vigneshP8
+Command: goForward, Timestamp: 2023-08-03 15:23:48, Participant: vigneshP8
+Command: goRightUp, Timestamp: 2023-08-03 15:23:53, Participant: vigneshP8
+Command: goRightUpStop, Timestamp: 2023-08-03 15:23:56, Participant: vigneshP8
+Command: goRight, Timestamp: 2023-08-03 15:23:57, Participant: vigneshP8
+Command: goRightStop, Timestamp: 2023-08-03 15:23:58, Participant: vigneshP8
+Command: Stop, Timestamp: 2023-08-03 15:23:59, Participant: vigneshP8
+Command: goRight, Timestamp: 2023-08-03 15:24:36, Participant: vigneshP8
+Command: goRightStop, Timestamp: 2023-08-03 15:24:38, Participant: vigneshP8
+Command: Stop, Timestamp: 2023-08-03 15:24:46, Participant: vigneshP8
+Start: Timestamp: 2023-08-03 15:25:03, Participant: vigneshP8, Amplitude: 8, Pulse width: 200
+Command: goForward, Timestamp: 2023-08-03 15:25:03, Participant: vigneshP8
+Command: goRightUp, Timestamp: 2023-08-03 15:25:08, Participant: vigneshP8
+Command: goRightUpStop, Timestamp: 2023-08-03 15:25:11, Participant: vigneshP8
+Command: goRight, Timestamp: 2023-08-03 15:25:30, Participant: vigneshP8
+Command: goRightStop, Timestamp: 2023-08-03 15:25:31, Participant: vigneshP8
+Command: goLeft, Timestamp: 2023-08-03 15:25:41, Participant: vigneshP8
+Command: goLeftStop, Timestamp: 2023-08-03 15:25:44, Participant: vigneshP8
+Command: goLeft, Timestamp: 2023-08-03 15:25:57, Participant: vigneshP8
+Command: goLeftStop, Timestamp: 2023-08-03 15:25:59, Participant: vigneshP8
+Command: goLeft, Timestamp: 2023-08-03 15:26:06, Participant: vigneshP8
+Command: goLeftStop, Timestamp: 2023-08-03 15:26:07, Participant: vigneshP8
+Command: Stop, Timestamp: 2023-08-03 15:26:30, Participant: vigneshP8
+Command: goForward, Timestamp: 2023-08-03 15:26:43, Participant: vigneshP8
+Command: goLeft, Timestamp: 2023-08-03 15:26:54, Participant: vigneshP8
+Command: goLeftStop, Timestamp: 2023-08-03 15:26:57, Participant: vigneshP8
+Command: goLeftUp, Timestamp: 2023-08-03 15:27:05, Participant: vigneshP8
+Command: goLeftUpStop, Timestamp: 2023-08-03 15:27:08, Participant: vigneshP8
+Command: goRight, Timestamp: 2023-08-03 15:27:15, Participant: vigneshP8
+Command: goRightStop, Timestamp: 2023-08-03 15:27:21, Participant: vigneshP8
+Command: Stop, Timestamp: 2023-08-03 15:27:40, Participant: vigneshP8
+Stop: Timestamp: 2023-08-03 15:27:44, Participant: vigneshP8, Amplitude: 8, Pulse width: 200

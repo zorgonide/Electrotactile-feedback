@@ -1,0 +1,34 @@
+Command: goForward, Timestamp: 2023-08-01 15:36:49, Participant: nipunP3, Amplitude: 9, Pulse width: 200
+Command: goForwardStop, Timestamp: 2023-08-01 15:36:56, Participant: nipunP3, Amplitude: 9, Pulse width: 200
+Command: goRight, Timestamp: 2023-08-01 15:36:56, Participant: nipunP3, Amplitude: 9, Pulse width: 200
+Command: goRightStop, Timestamp: 2023-08-01 15:37:01, Participant: nipunP3, Amplitude: 9, Pulse width: 200
+Start: Timestamp: 2023-08-01 15:37:38, Participant: nipunP3, Amplitude: 9, Pulse width: 200
+Command: goRightUp, Timestamp: 2023-08-01 15:37:39, Participant: nipunP3, Amplitude: 9, Pulse width: 200
+Command: goRightUpStop, Timestamp: 2023-08-01 15:37:47, Participant: nipunP3, Amplitude: 9, Pulse width: 200
+Command: goForward, Timestamp: 2023-08-01 15:37:52, Participant: nipunP3, Amplitude: 9, Pulse width: 200
+Command: goRight, Timestamp: 2023-08-01 15:38:16, Participant: nipunP3, Amplitude: 9, Pulse width: 200
+Command: goForward, Timestamp: 2023-08-01 15:38:26, Participant: nipunP3, Amplitude: 9, Pulse width: 200
+Command: goLeft, Timestamp: 2023-08-01 15:38:31, Participant: nipunP3, Amplitude: 9, Pulse width: 200
+Command: goLeftStop, Timestamp: 2023-08-01 15:38:41, Participant: nipunP3, Amplitude: 9, Pulse width: 200
+Command: goLeft, Timestamp: 2023-08-01 15:38:42, Participant: nipunP3, Amplitude: 9, Pulse width: 200
+Command: goLeftStop, Timestamp: 2023-08-01 15:38:44, Participant: nipunP3, Amplitude: 9, Pulse width: 200
+Command: goLeft, Timestamp: 2023-08-01 15:39:01, Participant: nipunP3, Amplitude: 9, Pulse width: 200
+Command: goLeftStop, Timestamp: 2023-08-01 15:39:03, Participant: nipunP3, Amplitude: 9, Pulse width: 200
+Command: goForward, Timestamp: 2023-08-01 15:39:04, Participant: nipunP3, Amplitude: 9, Pulse width: 200
+Command: goLeftUp, Timestamp: 2023-08-01 15:39:08, Participant: nipunP3, Amplitude: 9, Pulse width: 200
+Command: goRightUp, Timestamp: 2023-08-01 15:39:12, Participant: nipunP3, Amplitude: 9, Pulse width: 200
+Command: goForward, Timestamp: 2023-08-01 15:39:18, Participant: nipunP3, Amplitude: 9, Pulse width: 200
+Command: goRight, Timestamp: 2023-08-01 15:39:26, Participant: nipunP3, Amplitude: 9, Pulse width: 200
+Command: goForward, Timestamp: 2023-08-01 15:39:30, Participant: nipunP3, Amplitude: 9, Pulse width: 200
+Command: goLeft, Timestamp: 2023-08-01 15:39:33, Participant: nipunP3, Amplitude: 9, Pulse width: 200
+Command: goForward, Timestamp: 2023-08-01 15:39:36, Participant: nipunP3, Amplitude: 9, Pulse width: 200
+Command: goLeftUp, Timestamp: 2023-08-01 15:39:46, Participant: nipunP3, Amplitude: 9, Pulse width: 200
+Command: goLeft, Timestamp: 2023-08-01 15:39:51, Participant: nipunP3, Amplitude: 9, Pulse width: 200
+Command: goLeftStop, Timestamp: 2023-08-01 15:40:00, Participant: nipunP3, Amplitude: 9, Pulse width: 200
+Command: goForward, Timestamp: 2023-08-01 15:40:02, Participant: nipunP3, Amplitude: 9, Pulse width: 200
+Command: goLeft, Timestamp: 2023-08-01 15:40:21, Participant: nipunP3, Amplitude: 9, Pulse width: 200
+Command: goForward, Timestamp: 2023-08-01 15:40:28, Participant: nipunP3, Amplitude: 9, Pulse width: 200
+Command: goForward, Timestamp: 2023-08-01 15:40:31, Participant: nipunP3, Amplitude: 9, Pulse width: 200
+Command: goForwardStop, Timestamp: 2023-08-01 15:40:32, Participant: nipunP3, Amplitude: 9, Pulse width: 200
+Command: goForward, Timestamp: 2023-08-01 15:40:35, Participant: nipunP3, Amplitude: 9, Pulse width: 200
+Stop: Timestamp: 2023-08-01 15:40:40, Participant: nipunP3, Amplitude: 9, Pulse width: 200

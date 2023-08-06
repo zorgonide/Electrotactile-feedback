@@ -1,0 +1,19 @@
+Command: goUp, Timestamp: 2023-08-03 15:34:40, Participant: 8
+Command: goLeft, Timestamp: 2023-08-03 15:34:44, Participant: 8
+Command: goLeftUp, Timestamp: 2023-08-03 15:34:46, Participant: 8
+Command: goRightUp, Timestamp: 2023-08-03 15:34:49, Participant: 8
+Command: goRight, Timestamp: 2023-08-03 15:34:50, Participant: 8
+Command: Stop, Timestamp: 2023-08-03 15:34:52, Participant: 8
+Start: Timestamp: 2023-08-03 15:35:39, Participant: 8
+Command: goRightUp, Timestamp: 2023-08-03 15:35:39, Participant: 8
+Command: goRightUp, Timestamp: 2023-08-03 15:35:47, Participant: 8
+Command: goRight, Timestamp: 2023-08-03 15:36:11, Participant: 8
+Command: goLeft, Timestamp: 2023-08-03 15:36:21, Participant: 8
+Command: goLeftUp, Timestamp: 2023-08-03 15:36:29, Participant: 8
+Command: goRightUp, Timestamp: 2023-08-03 15:36:38, Participant: 8
+Command: goRightUp, Timestamp: 2023-08-03 15:36:49, Participant: 8
+Command: goLeft, Timestamp: 2023-08-03 15:36:58, Participant: 8
+Command: goLeftUp, Timestamp: 2023-08-03 15:37:12, Participant: 8
+Command: goLeft, Timestamp: 2023-08-03 15:37:18, Participant: 8
+Command: goLeft, Timestamp: 2023-08-03 15:37:40, Participant: 8
+Command: Stop, Timestamp: 2023-08-03 15:37:51, Participant: 8

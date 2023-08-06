@@ -1,0 +1,79 @@
+Command: goLeft, Timestamp: 2023-08-01 13:50:07, Participant: eshaP2
+Command: goLeftStop, Timestamp: 2023-08-01 13:50:09, Participant: eshaP2
+Command: updated Amplitude to 9, Timestamp: 2023-08-01 13:50:12, Participant: eshaP2
+Command: updated Amplitude to 10, Timestamp: 2023-08-01 13:50:12, Participant: eshaP2
+Command: updated Amplitude to 11, Timestamp: 2023-08-01 13:50:13, Participant: eshaP2
+Command: updated Amplitude to 10, Timestamp: 2023-08-01 13:50:16, Participant: eshaP2
+Command: updated Amplitude to 11, Timestamp: 2023-08-01 13:50:24, Participant: eshaP2
+Command: updated Amplitude to 12, Timestamp: 2023-08-01 13:50:25, Participant: eshaP2
+Command: updated Amplitude to 13, Timestamp: 2023-08-01 13:50:25, Participant: eshaP2
+Command: updated Amplitude to 14, Timestamp: 2023-08-01 13:50:27, Participant: eshaP2
+Command: goLeft, Timestamp: 2023-08-01 13:50:28, Participant: eshaP2
+Command: goLeftStop, Timestamp: 2023-08-01 13:50:31, Participant: eshaP2
+Command: goForward, Timestamp: 2023-08-01 13:50:38, Participant: eshaP2
+Command: goLeft, Timestamp: 2023-08-01 13:52:19, Participant: eshaP2
+Command: goLeftStop, Timestamp: 2023-08-01 13:52:22, Participant: eshaP2
+Command: goRight, Timestamp: 2023-08-01 13:52:24, Participant: eshaP2
+Command: goRightStop, Timestamp: 2023-08-01 13:52:27, Participant: eshaP2
+Command: goRightUp, Timestamp: 2023-08-01 13:52:28, Participant: eshaP2
+Command: goRightUpStop, Timestamp: 2023-08-01 13:52:34, Participant: eshaP2
+Command: updated Amplitude to 15, Timestamp: 2023-08-01 13:52:35, Participant: eshaP2
+Command: goRightUp, Timestamp: 2023-08-01 13:52:39, Participant: eshaP2
+Command: goRightUpStop, Timestamp: 2023-08-01 13:52:42, Participant: eshaP2
+Command: updated Amplitude to 16, Timestamp: 2023-08-01 13:52:44, Participant: eshaP2
+Command: goLeftUp, Timestamp: 2023-08-01 13:52:46, Participant: eshaP2
+Command: goLeftUpStop, Timestamp: 2023-08-01 13:52:49, Participant: eshaP2
+Command: goForward, Timestamp: 2023-08-01 13:53:02, Participant: eshaP2
+Command: goForward, Timestamp: 2023-08-01 13:53:08, Participant: eshaP2
+Command: goForward, Timestamp: 2023-08-01 13:54:21, Participant: eshaP2
+Command: goLeftUp, Timestamp: 2023-08-01 13:54:25, Participant: eshaP2
+Command: goLeftUpStop, Timestamp: 2023-08-01 13:54:26, Participant: eshaP2
+Command: goLeftUp, Timestamp: 2023-08-01 13:54:28, Participant: eshaP2
+Command: goRightUp, Timestamp: 2023-08-01 13:54:30, Participant: eshaP2
+Command: goLeftUpStop, Timestamp: 2023-08-01 13:54:36, Participant: eshaP2
+Command: goRightUpStop, Timestamp: 2023-08-01 13:54:37, Participant: eshaP2
+Command: goLeft, Timestamp: 2023-08-01 13:54:38, Participant: eshaP2
+Command: goRight, Timestamp: 2023-08-01 13:54:40, Participant: eshaP2
+Command: goLeftStop, Timestamp: 2023-08-01 13:54:41, Participant: eshaP2
+Command: Stop, Timestamp: 2023-08-01 13:54:43, Participant: eshaP2
+Command: goRightStop, Timestamp: 2023-08-01 13:54:47, Participant: eshaP2
+Command: goRight, Timestamp: 2023-08-01 13:54:47, Participant: eshaP2
+Command: goRightStop, Timestamp: 2023-08-01 13:54:47, Participant: eshaP2
+Command: Stop, Timestamp: 2023-08-01 13:54:49, Participant: eshaP2
+Command: Stop, Timestamp: 2023-08-01 13:54:53, Participant: eshaP2
+Start: Timestamp: 2023-08-01 13:56:20, Participant: eshaP2, Amplitude: 8, Pulse width: 200
+Command: goRightUp, Timestamp: 2023-08-01 13:56:21, Participant: eshaP2
+Command: goRightUpStop, Timestamp: 2023-08-01 13:56:38, Participant: eshaP2
+Command: Stop, Timestamp: 2023-08-01 13:56:39, Participant: eshaP2
+Command: goForward, Timestamp: 2023-08-01 13:56:55, Participant: eshaP2
+Command: goRight, Timestamp: 2023-08-01 13:57:52, Participant: eshaP2
+Command: goRightStop, Timestamp: 2023-08-01 13:57:56, Participant: eshaP2
+Command: goForward, Timestamp: 2023-08-01 13:57:57, Participant: eshaP2
+Command: goLeft, Timestamp: 2023-08-01 13:58:05, Participant: eshaP2
+Command: goLeftStop, Timestamp: 2023-08-01 13:58:08, Participant: eshaP2
+Command: goLeftUp, Timestamp: 2023-08-01 13:58:13, Participant: eshaP2
+Command: goLeftUpStop, Timestamp: 2023-08-01 13:58:18, Participant: eshaP2
+Command: goRightUp, Timestamp: 2023-08-01 13:58:21, Participant: eshaP2
+Command: goRightUpStop, Timestamp: 2023-08-01 13:58:28, Participant: eshaP2
+Command: goRight, Timestamp: 2023-08-01 13:58:36, Participant: eshaP2
+Command: goRightStop, Timestamp: 2023-08-01 13:58:39, Participant: eshaP2
+Command: goRightUp, Timestamp: 2023-08-01 13:58:39, Participant: eshaP2
+Command: goRight, Timestamp: 2023-08-01 13:58:50, Participant: eshaP2
+Command: goRightUpStop, Timestamp: 2023-08-01 13:58:51, Participant: eshaP2
+Command: goRightStop, Timestamp: 2023-08-01 13:58:52, Participant: eshaP2
+Command: goLeft, Timestamp: 2023-08-01 13:58:54, Participant: eshaP2
+Command: goLeftStop, Timestamp: 2023-08-01 13:58:58, Participant: eshaP2
+Command: goForward, Timestamp: 2023-08-01 13:58:59, Participant: eshaP2
+Command: goLeftUp, Timestamp: 2023-08-01 13:59:11, Participant: eshaP2
+Command: goLeftUpStop, Timestamp: 2023-08-01 13:59:15, Participant: eshaP2
+Command: goLeft, Timestamp: 2023-08-01 13:59:18, Participant: eshaP2
+Command: goLeftStop, Timestamp: 2023-08-01 13:59:28, Participant: eshaP2
+Command: goLeftUp, Timestamp: 2023-08-01 13:59:32, Participant: eshaP2
+Command: goLeftUpStop, Timestamp: 2023-08-01 13:59:33, Participant: eshaP2
+Command: goForward, Timestamp: 2023-08-01 13:59:34, Participant: eshaP2
+Command: goLeft, Timestamp: 2023-08-01 13:59:50, Participant: eshaP2
+Command: goLeftStop, Timestamp: 2023-08-01 13:59:54, Participant: eshaP2
+Command: goForward, Timestamp: 2023-08-01 13:59:55, Participant: eshaP2
+Command: Stop, Timestamp: 2023-08-01 13:59:59, Participant: eshaP2
+Stop: Timestamp: 2023-08-01 14:00:05, Participant: eshaP2, Amplitude: 8, Pulse width: 200
+Stop: Timestamp: 2023-08-01 14:00:07, Participant: eshaP2, Amplitude: 8, Pulse width: 200

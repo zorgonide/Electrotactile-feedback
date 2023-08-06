@@ -1,0 +1,24 @@
+Command: goForward, Timestamp: 2023-08-03 14:06:07, Participant: reeyaP6, Amplitude: 9, Pulse width: 200
+Command: goForwardStop, Timestamp: 2023-08-03 14:06:11, Participant: reeyaP6, Amplitude: 9, Pulse width: 200
+Start: Timestamp: 2023-08-03 14:06:26, Participant: reeyaP6, Amplitude: 9, Pulse width: 200
+Command: goForward, Timestamp: 2023-08-03 14:06:27, Participant: reeyaP6, Amplitude: 9, Pulse width: 200
+Command: goRight, Timestamp: 2023-08-03 14:06:35, Participant: reeyaP6, Amplitude: 9, Pulse width: 200
+Command: goForward, Timestamp: 2023-08-03 14:06:38, Participant: reeyaP6, Amplitude: 9, Pulse width: 200
+Command: goRight, Timestamp: 2023-08-03 14:06:59, Participant: reeyaP6, Amplitude: 9, Pulse width: 200
+Command: goRightStop, Timestamp: 2023-08-03 14:06:59, Participant: reeyaP6, Amplitude: 9, Pulse width: 200
+Command: goForward, Timestamp: 2023-08-03 14:07:00, Participant: reeyaP6, Amplitude: 9, Pulse width: 200
+Command: goForwardStop, Timestamp: 2023-08-03 14:07:03, Participant: reeyaP6, Amplitude: 9, Pulse width: 200
+Command: goForward, Timestamp: 2023-08-03 14:07:04, Participant: reeyaP6, Amplitude: 9, Pulse width: 200
+Command: goRight, Timestamp: 2023-08-03 14:07:19, Participant: reeyaP6, Amplitude: 9, Pulse width: 200
+Command: goLeftUp, Timestamp: 2023-08-03 14:07:26, Participant: reeyaP6, Amplitude: 9, Pulse width: 200
+Command: goLeft, Timestamp: 2023-08-03 14:07:31, Participant: reeyaP6, Amplitude: 9, Pulse width: 200
+Command: goForward, Timestamp: 2023-08-03 14:07:33, Participant: reeyaP6, Amplitude: 9, Pulse width: 200
+Command: goLeftUp, Timestamp: 2023-08-03 14:07:42, Participant: reeyaP6, Amplitude: 9, Pulse width: 200
+Command: goForward, Timestamp: 2023-08-03 14:07:48, Participant: reeyaP6, Amplitude: 9, Pulse width: 200
+Command: goRightUp, Timestamp: 2023-08-03 14:07:53, Participant: reeyaP6, Amplitude: 9, Pulse width: 200
+Command: goForward, Timestamp: 2023-08-03 14:08:12, Participant: reeyaP6, Amplitude: 9, Pulse width: 200
+Command: goLeftUp, Timestamp: 2023-08-03 14:08:24, Participant: reeyaP6, Amplitude: 9, Pulse width: 200
+Command: goLeft, Timestamp: 2023-08-03 14:08:34, Participant: reeyaP6, Amplitude: 9, Pulse width: 200
+Command: goForward, Timestamp: 2023-08-03 14:08:37, Participant: reeyaP6, Amplitude: 9, Pulse width: 200
+Command: goForward, Timestamp: 2023-08-03 14:08:42, Participant: reeyaP6, Amplitude: 9, Pulse width: 200
+Command: goForwardStop, Timestamp: 2023-08-03 14:08:46, Participant: reeyaP6, Amplitude: 9, Pulse width: 200
