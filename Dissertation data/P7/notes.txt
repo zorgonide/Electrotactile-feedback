@@ -1,0 +1,17 @@
+R1a
+0m
+0i
+
+R2 ds
+0m
+0i
+
+R3 cs
+0m
+0i
+only one to take the door
+
+R4
+1m 
+1i
+map doesnt turn with user

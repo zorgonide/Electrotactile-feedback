@@ -1,0 +1,21 @@
+Mode,Average Score
+Map,62.25
+Audio based,83.25
+Electrotactile Discontinuous,66
+Electrotactile Continuous,65.75
+Map_irritating,3
+Map_distracting,5
+Map_tired,3
+Map_confident,5
+Audio based_irritating,0
+Audio based_distracting,2
+Audio based_tired,1
+Audio based_continuous,2
+Electrotactile Discontinuous_irritating,2
+Electrotactile Discontinuous_distracting,3
+Electrotactile Discontinuous_tired,2
+Electrotactile Discontinuous_itchy,0
+Electrotactile Continuous_irritating,2
+Electrotactile Continuous_distracting,5
+Electrotactile Continuous_tired,3
+Electrotactile Continuous_itchy,0

@@ -1,0 +1,16 @@
+R1 cs
+1m
+
+
+R2 m
+time 1.52s
+random people put in tables,modifying the map
+
+
+R3 a
+1m
+1i
+R4 ds
+0m
+0i
+did not like cs because couldnt figure what was buzzing 

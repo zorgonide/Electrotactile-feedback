@@ -1,0 +1,15 @@
+R1 2:09
+2 deviations
+map
+
+R2
+no deviation
+audio 
+
+R3
+2 deviation
+DS
+
+R4
+2 deviation
+CS
