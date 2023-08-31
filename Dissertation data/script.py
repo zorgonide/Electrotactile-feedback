@@ -63,7 +63,7 @@ feedback = {
     "Electrotactile Continuous": []
 }
 # Read and process the CSV file
-csv_filename = "data1.csv"
+csv_filename = "data.csv"
 with open(csv_filename, 'r', newline='') as csv_file:
     csv_reader = csv.reader(csv_file)
     next(csv_reader)  # Skip header row
