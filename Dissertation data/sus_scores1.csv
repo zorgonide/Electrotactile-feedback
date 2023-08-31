@@ -1,0 +1,21 @@
+Mode,Average SUS Score
+Map,62.5
+Audio based,83.75
+Electrotactile Continuous,61.458333333333336
+Electrotactile Discontinuous,67.70833333333333
+Map_irritating,3
+Map_distracting,7
+Map_tired,4
+Map_confident,6
+Audio based_irritating,0
+Audio based_distracting,3
+Audio based_tired,1
+Audio based_continuous,3
+Electrotactile Discontinuous_irritating,2
+Electrotactile Discontinuous_distracting,4
+Electrotactile Discontinuous_tired,2
+Electrotactile Discontinuous_itchy,0
+Electrotactile Continuous_irritating,2
+Electrotactile Continuous_distracting,7
+Electrotactile Continuous_tired,3
+Electrotactile Continuous_itchy,0

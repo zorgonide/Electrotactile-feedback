@@ -3,7 +3,7 @@ from tkinter import ttk
 import logging
 from datetime import datetime
 import pygame
-
+import os
 
 class KeyboardInterface(tk.Frame):
     def __init__(self, master):
@@ -117,6 +117,8 @@ if __name__ == '__main__':
     logger = logging.getLogger('UserStudyLogger')
     logger.setLevel(logging.INFO)
     log_file = "./logs/sound/"+participant_name + '-SoundTest.txt'
+    log_directory = "./logs/sound"
+    os.makedirs(log_directory, exist_ok=True)  # Create the directory if it doesn't exist
     file_handler = logging.FileHandler(log_file)
     logger.addHandler(file_handler)
     root = tk.Tk()

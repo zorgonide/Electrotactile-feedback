@@ -6,6 +6,7 @@ from tkinter import ttk
 import logging
 from datetime import datetime
 import time
+import os
 L = 0
 R = 1
 LF = 2
@@ -155,14 +156,14 @@ class KeyboardInterface(tk.Frame):
         if self.button_down_active["state"] == 0:
             self.check_button_active()
             logger.info(
-                f"Command: goForward, Timestamp: {self.timestamp()}, Participant: {participant_name}, Amplitude: {self.amplitude}, Pulse width: {self.pulse_width}")
+                f"Command: Stop, Timestamp: {self.timestamp()}, Participant: {participant_name}, Amplitude: {self.amplitude}, Pulse width: {self.pulse_width}")
             self.toggle_button_color(self.button_down_active, self.button_down)
             self.fes.stimulate(self.tactons[L])
             time.sleep(0.63)
             self.fes.stimulate(self.tactons[R])
         else:
             logger.info(
-                f"Command: goForwardStop, Timestamp: {self.timestamp()}, Participant: {participant_name}, Amplitude: {self.amplitude}, Pulse width: {self.pulse_width}")
+                f"Command: Stop, Timestamp: {self.timestamp()}, Participant: {participant_name}, Amplitude: {self.amplitude}, Pulse width: {self.pulse_width}")
             self.toggle_button_color(self.button_down_active, self.button_down)
             self.fes.stop(self.tactons[L])
             self.fes.stop(self.tactons[R])
@@ -234,6 +235,8 @@ class KeyboardInterface(tk.Frame):
             f"Command: updated Amplitude to {self.sb_amplitude.get()}, Timestamp: {self.timestamp()}, Participant: {participant_name}, Amplitude: {self.amplitude}, Pulse width: {self.pulse_width}")
         for c in range(1, 5):
             self.tactons[c - 1].amplitude = int(self.sb_amplitude.get())
+        self.amplitude = int(self.sb_amplitude.get())
+        
 
     def update_pulse_width(self):
         for c in range(1, 5):
@@ -281,6 +284,8 @@ if __name__ == '__main__':
     logger = logging.getLogger('UserStudyLogger')
     logger.setLevel(logging.INFO)
     log_file = "./logs/haptic/"+participant_name + '-HapticTest.txt'
+    log_directory = "./logs/haptic"
+    os.makedirs(log_directory, exist_ok=True)  # Create the directory if it doesn't exist
     file_handler = logging.FileHandler(log_file)
     logger.addHandler(file_handler)
     # initialise FES Controller

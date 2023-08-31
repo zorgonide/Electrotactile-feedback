@@ -63,7 +63,7 @@ feedback = {
     "Electrotactile Continuous": []
 }
 # Read and process the CSV file
-csv_filename = "data.csv"
+csv_filename = "data1.csv"
 with open(csv_filename, 'r', newline='') as csv_file:
     csv_reader = csv.reader(csv_file)
     next(csv_reader)  # Skip header row
@@ -138,7 +138,7 @@ for mode, scores in sus_scores.items():
 
 # Print and write to CSV
 output_csv_filename = "sus_scores1.csv"
-feedback_csv_filename = "feedback.csv"
+feedback_csv_filename = "feedback1.csv"
 with open(output_csv_filename, 'w', newline='') as output_csv_file:
     csv_writer = csv.writer(output_csv_file)
     csv_writer.writerow(["Mode", "Average SUS Score"])  # Write header

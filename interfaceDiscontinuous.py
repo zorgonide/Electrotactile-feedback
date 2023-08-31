@@ -5,6 +5,8 @@ from stim8updated import *
 from tkinter import ttk
 import logging
 from datetime import datetime
+import os
+
 L = 0
 R = 1
 LF = 2
@@ -16,7 +18,7 @@ class KeyboardInterface(tk.Frame):
         tk.Frame.__init__(self, master, padx=10, pady=10)
         self.pack()
         self.fes = fes
-        self.amplitude = 8
+        self.amplitude = 9
         self.frequency = 1
         self.pulse_width = 200
         self.duration = -1
@@ -25,9 +27,9 @@ class KeyboardInterface(tk.Frame):
                    duration=-1, pulse_width=self.pulse_width),
             Tacton(channel=R+1, frequency=self.frequency, amplitude=self.amplitude,
                    duration=-1, pulse_width=self.pulse_width),
-            Tacton(channel=LF+1, frequency=self.frequency, amplitude=self.amplitude,
+            Tacton(channel=LF+1, frequency=self.frequency, amplitude=self.amplitude+2,
                    duration=self.duration, pulse_width=self.pulse_width),
-            Tacton(channel=RF+1, frequency=self.frequency, amplitude=self.amplitude,
+            Tacton(channel=RF+1, frequency=self.frequency, amplitude=self.amplitude+2,
                    duration=self.duration, pulse_width=self.pulse_width),
         ))
         self.create_widgets()
@@ -206,6 +208,7 @@ class KeyboardInterface(tk.Frame):
             f"Command: updated Amplitude to {self.sb_amplitude.get()}, Timestamp: {self.timestamp()}, Participant: {participant_name}")
         for c in range(1, 5):
             self.tactons[c - 1].amplitude = int(self.sb_amplitude.get())
+        self.amplitude = int(self.sb_amplitude.get())
         # self.tacton.amplitude = int(self.sb_amplitude.get())
         # self.update_fes()  # not necessary for now
 
@@ -250,6 +253,8 @@ if __name__ == '__main__':
     logger = logging.getLogger('UserStudyLogger')
     logger.setLevel(logging.INFO)
     log_file = "./logs/haptic/"+participant_name + '-HapticTestDiscontinuous.txt'
+    log_directory = "./logs/haptic"
+    os.makedirs(log_directory, exist_ok=True)  # Create the directory if it doesn't exist
     file_handler = logging.FileHandler(log_file)
     logger.addHandler(file_handler)
     # initialise FES Controller
